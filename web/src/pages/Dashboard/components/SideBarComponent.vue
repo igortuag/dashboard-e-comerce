@@ -1,6 +1,24 @@
 <template>
-  <div>
-    <p>SideBar</p>
+  <div class="sidebar">
+    <div class="top">
+      <div class="avatar">
+        <span><i class="fa fa-user icon"></i></span>
+      </div>
+      <div class="info">
+        <p class="name">Igor Tuag</p>
+        <span class="status">Online</span>
+      </div>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -9,5 +27,46 @@ export default {
   name: "SideBarComponent",
 };
 </script>
+<style lang="scss">
+@import "@/assets/scss/_main";
 
-<style lagn="scss"></style>
+.sidebar {
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 5px;
+    margin-top: 60px;
+
+    .avatar {
+      margin-right: 10px;
+
+      span {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: #666666;
+      }
+    }
+
+    .info {
+      color: $white;
+      .name {
+        margin: 0px;
+        font-size: 14px;
+      }
+      .status {
+        margin: 0px;
+        font-size: 10px;
+      }
+    }
+  }
+}
+</style>
