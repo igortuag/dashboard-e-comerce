@@ -2,15 +2,15 @@ import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
 
-import LoginComponent from "./components/LoginComponent";
-import HomeComponent from "./components/HomeComponent";
+import LoginComponent from "./pages/Login/LoginComponent";
+import HomeComponent from "./pages/Home/HomeComponent";
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/login", component: LoginComponent },
-  { path: "/home", component: HomeComponent },
+  { path: "/", name: "login", component: LoginComponent },
+  { path: "/home", name: "home", component: HomeComponent },
 ];
 
 const router = new VueRouter({
