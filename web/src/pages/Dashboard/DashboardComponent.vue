@@ -1,10 +1,11 @@
 <template>
   <div class="main">
-    <div class="sidebar"></div>
-
+    <div class="sidebar">
+      <SideBarComponent></SideBarComponent>
+    </div>
     <div class="content-right">
       <div class="navbar">
-        s
+        <NavBarComponent></NavBarComponent>
       </div>
 
       <div class="pages">
@@ -15,8 +16,12 @@
 </template>
 
 <script>
+import SideBarComponent from "./components/SideBarComponent";
+import NavBarComponent from "./components/NavBarComponent";
+
 export default {
   name: "DashboardComponent",
+  components: { SideBarComponent, NavBarComponent },
 };
 </script>
 
