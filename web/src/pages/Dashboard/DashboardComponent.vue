@@ -9,7 +9,7 @@
       </div>
 
       <div class="pages">
-        f
+        <slot name="slot-pages"></slot>
       </div>
     </div>
   </div>

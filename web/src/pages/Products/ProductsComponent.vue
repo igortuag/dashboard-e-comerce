@@ -1,7 +1,7 @@
 <template>
   <DashboardComponent>
     <div slot="slot-pages" class="content-pages">
-      <p>Home</p>
+      <p>Produtos</p>
     </div>
   </DashboardComponent>
 </template>
@@ -10,6 +10,7 @@
 import DashboardComponent from "../Dashboard/DashboardComponent";
 
 export default {
+  name: "ProductsComponents",
   components: {
     DashboardComponent,
   },
