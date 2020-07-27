@@ -3,21 +3,25 @@
     <div class="top">
       <p><strong>Clientes</strong></p>
       <div class="content">
-        <table class="table table-striped">
+        <table class="table table-striped my_table">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nome</th>
               <th scope="col">E-mail</th>
-              <th scope="col">Telefone</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+            <tr v-for="user in users" :key="user.id">
+              <th scope="row">
+                <p ckass="users">{{ user.id }}</p>
+              </th>
+              <td>
+                <p ckass="users">{{ user.name }}</p>
+              </td>
+              <td>
+                <p ckass="users">{{ user.email }}</p>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -29,6 +33,9 @@
 <script>
 export default {
   name: "ListComponent",
+  props: {
+    users: Array,
+  },
 };
 </script>
 
@@ -39,5 +46,9 @@ export default {
   border: 1px solid #ccc;
   border-radius: 7px;
   background-color: #fff;
+
+  .users {
+    font-size: 12px;
+  }
 }
 </style>
