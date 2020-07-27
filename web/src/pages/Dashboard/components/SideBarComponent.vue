@@ -23,7 +23,12 @@
           >
         </li>
         <li>
-          <router-link :to="{ name: 'products' }"
+          <router-link :to="{ name: 'clients' }"
+            ><i class="fa fa-store icon"></i> Clientes</router-link
+          >
+        </li>
+        <li>
+          <router-link :to="{ name: 'clients' }"
             ><i class="fa fa-store icon"></i> Vendas</router-link
           >
         </li>
