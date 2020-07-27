@@ -1,18 +1,20 @@
 <template>
   <div class="list">
     <div class="top">
-      <p><strong>Clientes</strong></p>
+      <p>
+        <strong>{{ description }}</strong>
+      </p>
       <div class="content">
         <table class="table table-striped my_table">
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Nome</th>
-              <th scope="col">E-mail</th>
+              <th scope="col">{{ columns[0] }}</th>
+              <th scope="col">{{ columns[1] }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="user in users" :key="user.id">
+            <tr v-for="user in data" :key="user.id">
               <th scope="row">
                 <p ckass="users">{{ user.id }}</p>
               </th>
@@ -34,7 +36,9 @@
 export default {
   name: "ListComponent",
   props: {
-    users: Array,
+    data: Array,
+    description: String,
+    columns: [],
   },
 };
 </script>
